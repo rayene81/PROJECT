@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+    <!--link rel="stylesheet" href="../css/style.css"-->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(249, 56%, 43%);
+    padding: 50px;
+}
+ .logo {
+            position:absolute;
+            top: 400px; 
+            right: 600px; 
+            width: 150px; 
+            height: auto;
+        }
+         .lj {
+            position:absolute;
+            top: 300px; 
+            right: 600px; 
+            width: 1800; 
+            height: auto;
+        }
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #cbc1e2;
+    padding: 33px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    right: 1000px; 
+}
+button, input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+
+h2 {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+        <img src="../php/ui.png" alt="your image" class="logo">
+    <script>
+    function showLoader() {
+        document.getElementById("loader").style.display = "block";
+    }
+</script>
+<div class="container">
+
+    <form action="../php/login.php" method="post">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" name="registration_number" placeholder="رقم التسجيل" required>
+        <input type="password" name="password" placeholder="كلمة المرور" id="password" required>
+        <input type="checkbox" onclick="togglePassword()"> إظهار كلمة المرور
+        <input type="submit" value="دخول">
+        <a href="reset_request.html">هل نسيت كلمة المرور؟</a>
+        <a href="register.html">إنشاء حساب جديد</a>
+    </form>
+</div>
+<script>
+    function togglePassword() {
+        var pw = document.getElementById("password");
+        pw.type = pw.type === "password" ? "text" : "password";
+    }
+</script>
+  
+</body>
+</html>

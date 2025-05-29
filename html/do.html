@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الوصول غير متاح من الهاتف</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0d1b2a;
+            color: white;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f94144;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #eee;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .icons svg {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.4s ease;
+        }
+
+        .icons svg:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .exit-btn {
+            background-color: #f94144;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .exit-btn:hover {
+            background-color: #d62828;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <h1>تم إيقاف الدعم على الهاتف</h1>
+        <p>يرجى استخدام جهاز كمبيوتر لتجربة أفضل في غرفة الدردشة.</p>
+
+        <div class="icons">
+            <!-- جامعة -->
+            <svg fill="#ffffff" viewBox="0 0 64 64"><path d="M32 2L2 16l30 14 30-14L32 2zm0 20L10 16l22-10 22 10-22 6zm0 8L2 16v2l30 14 30-14v-2L32 30zm0 2L2 18v2l30 14 30-14v-2L32 32zm0 2L2 20v2l30 14 30-14v-2L32 34zm0 2L2 22v2l30 14 30-14v-2L32 36zm-6 4h12v18H26V40zm-6 0h4v18h-4V40zm24 0h4v18h-4V40z"/></svg>
+            <!-- طالب -->
+            <svg fill="#ffffff" viewBox="0 0 64 64"><path d="M32 2C17.6 2 6 13.6 6 28s11.6 26 26 26 26-11.6 26-26S46.4 2 32 2zm0 8a8 8 0 110 16 8 8 0 010-16zm0 40c-6.6 0-12.4-3.2-16-8.2 0-5.4 10.6-8.4 16-8.4s16 3 16 8.4c-3.6 5-9.4 8.2-16 8.2z"/></svg>
+            <!-- ساعة -->
+            <svg fill="#ffffff" viewBox="0 0 64 64"><path d="M32 2C15.4 2 2 15.4 2 32s13.4 30 30 30 30-13.4 30-30S48.6 2 32 2zm0 4c14.3 0 26 11.7 26 26S46.3 58 32 58 6 46.3 6 32 17.7 6 32 6zm-2 10v18h14v-4H34V16h-4z"/></svg>
+        </div>
+
+        <button class="exit-btn" onclick="window.location.href='index.php';">خروج</button>
+    </div>
+
+    <!-- Particles.js مكتبة -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5
+                },
+                "size": {
+                    "value": 3
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>

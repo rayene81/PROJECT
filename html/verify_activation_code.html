@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تفعيل الحساب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding-top: 100px;
+        }
+
+        .container {
+            background-color: white;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>تفعيل الحساب</h2>
+    <form action="../php/activate.php" method="POST">
+        <label for="activation_code">أدخل رمز التفعيل:</label><br>
+        <input type="text" name="activation_code" id="activation_code" required><br>
+        <input type="submit" value="تفعيل">
+
+    </form>
+<!-- زر إعادة إرسال الرمز -->
+<form action="../php/resend_activation_code.php" method="POST" style="margin-top: 15px;">
+    <input type="submit" value="إعادة إرسال رمز التفعيل">
+</form>
+<!-- العنصر المرئي أثناء التحميل -->
+<div id="loader" style="display:none; margin-top: 10px; font-weight: bold; color: #333;">
+    جارٍ الإرسال...
+</div>
+
+
+</div>
+<script>
+    function showLoader() {
+        document.getElementById("loader").style.display = "block";
+    }
+</script>
+</body>
+</html>
